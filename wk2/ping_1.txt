@@ -1,0 +1,23 @@
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# ping www.google.com
+PING www.google.com (142.251.41.68) 56(84) bytes of data.
+64 bytes from yyz10s20-in-f4.1e100.net (142.251.41.68): icmp_seq=1 ttl=59 time=1.06 ms
+64 bytes from yyz10s20-in-f4.1e100.net (142.251.41.68): icmp_seq=2 ttl=59 time=0.332 ms
+64 bytes from yyz10s20-in-f4.1e100.net (142.251.41.68): icmp_seq=3 ttl=59 time=0.383 ms
+64 bytes from yyz10s20-in-f4.1e100.net (142.251.41.68): icmp_seq=4 ttl=59 time=0.391 ms
+64 bytes from yyz10s20-in-f4.1e100.net (142.251.41.68): icmp_seq=5 ttl=59 time=0.363 ms
+64 bytes from yyz10s20-in-f4.1e100.net (142.251.41.68): icmp_seq=6 ttl=59 time=0.452 ms
+64 bytes from yyz10s20-in-f4.1e100.net (142.251.41.68): icmp_seq=7 ttl=59 time=0.354 ms
+^C
+--- www.google.com ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6074ms
+rtt min/avg/max/mdev = 0.332/0.476/1.059/0.240 ms
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# ping www.georgebrown.ca
+PING a1206.b.akamai.net (23.223.17.132) 56(84) bytes of data.
+64 bytes from a23-223-17-132.deploy.static.akamaitechnologies.com (23.223.17.132): icmp_seq=1 ttl=57 time=1.15 ms
+64 bytes from a23-223-17-132.deploy.static.akamaitechnologies.com (23.223.17.132): icmp_seq=2 ttl=57 time=0.394 ms
+64 bytes from a23-223-17-132.deploy.static.akamaitechnologies.com (23.223.17.132): icmp_seq=3 ttl=57 time=0.306 ms
+64 bytes from a23-223-17-132.deploy.static.akamaitechnologies.com (23.223.17.132): icmp_seq=4 ttl=57 time=0.378 ms
+^C
+--- a1206.b.akamai.net ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 0.306/0.556/1.148/0.343 ms

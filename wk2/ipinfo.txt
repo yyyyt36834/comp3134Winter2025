@@ -1,0 +1,21 @@
+
+IP address	Type	Hosted by	Location
+142.250.189.238	IPv4	Hosted by Google LLC Google LLC	United States of America
+2607:f8b0:4005:806::200e	IPv6	Hosted by Google LLC Google LLC	United States of America
+
+IP address	Type	Hosted by	Location
+198.96.86.176	IPv4	Hosted by The George Brown College of Applied Arts and Technology The George Brown College of Applied Arts and Technology	Canada
+
+
+
+IP address	Type	Hosted by	Location
+54.239.19.238	IPv4	Hosted by Amazon.com, Inc. Amazon.com, Inc.	United States of America
+52.94.225.242	IPv4	Hosted by Amazon.com, Inc. Amazon.com, Inc.	United States of America
+54.239.18.172	IPv4	Hosted by Amazon.com, Inc. Amazon.com, Inc.	United States of America
+
+	IP address	Type	Hosted by	Location
+198.35.26.98	IPv4	Hosted by Wikimedia Foundation Inc. Wikimedia Foundation Inc.	United States of America
+2620:0:863:ed1a::3	IPv6	Hosted by Wikimedia Foundation Inc. Wikimedia Foundation Inc.	United States of America
+
+	IP address	Type	Hosted by	Location
+140.82.116.4	IPv4	Hosted by GitHub, Inc. GitHub, Inc.	United States of America
