@@ -1,0 +1,16 @@
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# tcpdump -i eth0 tcp -c 10
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+19:17:19.692581 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > 198.96.87.225.57001: Flags [P.], seq 3477895283:3477895391, ack 3784656369, win 501, length 108
+19:17:19.692657 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > 198.96.87.225.57001: Flags [P.], seq 108:144, ack 1, win 501, length 36
+19:17:19.692707 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > 198.96.87.225.57001: Flags [P.], seq 144:196, ack 1, win 501, length 52
+19:17:19.692754 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > 198.96.87.225.57001: Flags [P.], seq 196:264, ack 1, win 501, length 68
+19:17:19.692804 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > 198.96.87.225.57001: Flags [P.], seq 264:332, ack 1, win 501, length 68
+19:17:19.692842 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > 198.96.87.225.57001: Flags [P.], seq 332:368, ack 1, win 501, length 36
+19:17:19.697737 IP 198.96.87.225.57001 > lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh: Flags [.], ack 368, win 2047, length 0
+19:17:19.793437 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.52014 > 67.207.67.3.domain: Flags [S], seq 2643974115, win 64240, options [mss 1460,sackOK,TS val 527725825 ecr 0,nop,wscale 7,tfo  cookiereq,nop,nop], length 0
+19:17:19.793794 IP 67.207.67.3.domain > lamp-ubuntu-s-1vcpu-1gb-tor1-01.52014: Flags [S.], seq 1792747214, ack 2643974116, win 65160, options [mss 1460,sackOK,TS val 3619518583 ecr 527725825,nop,wscale 9], length 0
+19:17:19.793831 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.52014 > 67.207.67.3.domain: Flags [.], ack 1, win 502, options [nop,nop,TS val 527725825 ecr 3619518583], length 0
+10 packets captured
+37 packets received by filter
+0 packets dropped by kernel

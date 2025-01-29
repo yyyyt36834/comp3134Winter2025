@@ -1,0 +1,24 @@
+To limit the number of packets captured, you can use the `-c` option in **`tcpdump`**. This option specifies the number of packets to capture before stopping the capture.
+
+### Example:
+
+```
+sudo tcpdump -i eth0 tcp -c 100
+```
+
+### Explanation:
+- **`-c 100`**: This tells `tcpdump` to capture only 100 packets.
+- **`-i eth0`**: Captures packets from the network interface `eth0`.
+- **`tcp`**: Captures only TCP packets.
+
+Once 100 TCP packets are captured, `tcpdump` will stop automatically.
+
+### Other Useful Options:
+- **`-w`**: To write the captured packets to a file (useful for later analysis).
+  Example: `sudo tcpdump -i eth0 tcp -c 100 -w capture.pcap`
+
+- **`-v` or `-vv` or `-vvv`**: To increase the verbosity of the output.
+
+- **`-n`**: To avoid resolving hostnames and show IP addresses instead (faster).
+
+If you need any other specific options or further clarifications, feel free to ask!
