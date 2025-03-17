@@ -1,0 +1,10 @@
+What is the difference between stripping tags and displaying the html entity value of any user input?
+
+The both ways mitigate the risk of malicious users trying to make the webpage execute tha task that is not intended.
+The difference is as follows.
+
+- Stripping tags will show the input without the tags. For example, if a user types in <script>hello</scirpt>,
+  it will take the <script></script> part of the input.
+
+- Displaying the html entity value of any user input will show the whole input. If a user types in <script>hello</scirpt>,
+  it will display <script>hello</scirpt> as input.

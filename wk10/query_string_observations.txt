@@ -1,0 +1,18 @@
+1) Navigate to the form and type a valid English word. Write your observations.
+
+	The web page renders and the url changes to "https://www.dictionary.com/browse/hello".
+
+2) Navigate to the URL and type an invalid English word after the `/browse/` section of the
+URL. Write your observations
+
+	The behavior is the same as the time when a valid english word was typed into the form. 
+
+3) Navigate to the form and type the following text: <script>alert(%27hello%27)</script>
+Write your observations.
+
+	It shows taht no results were found with thatinput.
+
+4) Navigate to the URL and type the following text: <script>alert(%27hello%27)</script>
+after the `term=` section of the URL. Write your observations
+
+	It returns 404.
