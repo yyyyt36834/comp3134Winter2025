@@ -1,0 +1,7 @@
+• What you see on the browser (the issue)
+	
+	The folders in one directory above the php resides are exposed.
+
+• What sensitive information is given by this page
+
+	The files or folders that are not intended to be shown are exposed using an encoded parameter.

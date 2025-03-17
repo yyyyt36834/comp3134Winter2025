@@ -1,0 +1,8 @@
+• Should not be able to view files and folders before html directory
+
+	Use basename() function to strip the last part of the url. It prevents users to enter url such as  /../../ to see the 
+	directories above html.
+
+• Should not attempt to look at folders that do not exists
+
+	use file_exists() to check if the file is actually exists in the directory.

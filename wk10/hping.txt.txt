@@ -1,0 +1,101 @@
+
+1) 10,000 TCP packets all at once from random source IP Addresses
+
+(Even after sending 10,000 packets werer sent, it did not stop until ctrl+c was hit, 
+ because it did not receive any response)
+
+
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# hping3 --count 10000 -S --rand-source 159.203.44.155
+HPING 159.203.44.155 (eth0 159.203.44.155): S set, 40 headers + 0 data bytes
+^C
+--- 159.203.44.155 hping statistic ---
+15 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+
+
+
+2) 9,000 UDP packets in a span of 90 seconds from a spoofed source address
+
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# hping3 --count 9000 -i u10000 -2 --spoof 192.168.1.50 159.203.44.155
+HPING 159.203.44.155 (eth0 159.203.44.155): udp mode set, 28 headers + 0 data bytes
+^C
+--- 159.203.44.155 hping statistic ---
+267 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+
+
+
+3) 11,000 ICMP packets with a data size of 1KB at an interval of 75 packets per second
+
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# hping3 --count 11000 --icmp --data 1024 -i u1333 159.203.44.155
+HPING 159.203.44.155 (eth0 159.203.44.155): icmp mode set, 28 headers + 1024 data bytes
+len=1052 ip=159.203.44.155 ttl=63 id=39655 icmp_seq=0 rtt=4.5 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39656 icmp_seq=1 rtt=3.2 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39657 icmp_seq=2 rtt=1.9 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39658 icmp_seq=3 rtt=8.3 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39659 icmp_seq=4 rtt=7.1 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39660 icmp_seq=5 rtt=5.8 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39661 icmp_seq=6 rtt=4.5 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39662 icmp_seq=7 rtt=3.1 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39663 icmp_seq=8 rtt=1.8 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39664 icmp_seq=9 rtt=7.8 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39665 icmp_seq=10 rtt=6.6 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39666 icmp_seq=11 rtt=5.3 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39667 icmp_seq=12 rtt=4.0 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39669 icmp_seq=13 rtt=2.7 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39670 icmp_seq=14 rtt=1.3 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39671 icmp_seq=15 rtt=7.3 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39672 icmp_seq=16 rtt=6.1 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39674 icmp_seq=17 rtt=4.8 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39675 icmp_seq=18 rtt=3.5 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39676 icmp_seq=19 rtt=2.2 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39677 icmp_seq=20 rtt=0.9 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39678 icmp_seq=21 rtt=7.0 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39680 icmp_seq=22 rtt=5.8 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39681 icmp_seq=23 rtt=4.5 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39682 icmp_seq=24 rtt=3.2 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39683 icmp_seq=25 rtt=1.9 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39684 icmp_seq=26 rtt=8.0 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39685 icmp_seq=27 rtt=6.8 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39686 icmp_seq=28 rtt=5.5 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39687 icmp_seq=29 rtt=4.2 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39689 icmp_seq=30 rtt=2.9 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39690 icmp_seq=31 rtt=1.6 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39691 icmp_seq=32 rtt=7.7 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39692 icmp_seq=33 rtt=6.5 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39693 icmp_seq=34 rtt=5.2 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39694 icmp_seq=35 rtt=3.8 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39695 icmp_seq=36 rtt=2.5 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39696 icmp_seq=37 rtt=1.1 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39697 icmp_seq=38 rtt=7.3 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39698 icmp_seq=39 rtt=6.1 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39699 icmp_seq=40 rtt=4.7 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39700 icmp_seq=41 rtt=3.4 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39701 icmp_seq=42 rtt=2.1 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39702 icmp_seq=43 rtt=8.3 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39703 icmp_seq=44 rtt=7.0 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39704 icmp_seq=45 rtt=5.7 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39705 icmp_seq=46 rtt=4.3 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39706 icmp_seq=47 rtt=3.0 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39707 icmp_seq=48 rtt=1.6 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39708 icmp_seq=49 rtt=7.7 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39709 icmp_seq=50 rtt=6.4 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39710 icmp_seq=51 rtt=5.2 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39711 icmp_seq=52 rtt=3.8 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39712 icmp_seq=53 rtt=2.5 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39713 icmp_seq=54 rtt=1.0 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39714 icmp_seq=55 rtt=7.1 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39715 icmp_seq=56 rtt=6.0 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39717 icmp_seq=57 rtt=4.7 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39718 icmp_seq=58 rtt=3.4 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39720 icmp_seq=59 rtt=1.9 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39721 icmp_seq=60 rtt=7.9 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39722 icmp_seq=61 rtt=6.7 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39723 icmp_seq=62 rtt=5.3 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39724 icmp_seq=63 rtt=4.0 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39725 icmp_seq=64 rtt=2.6 ms
+len=1052 ip=159.203.44.155 ttl=63 id=39726 icmp_seq=65 rtt=1.2 ms
+^C
+--- 159.203.44.155 hping statistic ---
+69 packets transmitted, 66 packets received, 5% packet loss
+round-trip min/avg/max = 0.9/4.6/8.3 ms

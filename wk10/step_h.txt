@@ -1,0 +1,3 @@
+How to mitigate the problem
+
+	Converting all the html components to php components so that it will not be shown on the browser.

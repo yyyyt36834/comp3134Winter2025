@@ -1,0 +1,7 @@
+• What you see on the browser (the issue)
+	
+	The folders in two directories above the php file resides.
+
+• What sensitive information is given by this page
+
+	All the core directories are exposed.
