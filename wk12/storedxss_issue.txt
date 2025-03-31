@@ -1,0 +1,3 @@
+Issues: 
+
+1. Stored data is rendered on the browser without sanitizing it, which leads to performing malicious tasks written with javascript on the text file 

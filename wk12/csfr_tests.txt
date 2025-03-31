@@ -1,0 +1,7 @@
+What I have noticed:
+
+1. csfr.php does not check whehter or not the form is submitted on csfr.php. It leads to accepting any form submission to csfr.php including such case that an attacker tricks a legitimate user to 
+load a html file containing a hidden form with the user credentials that are taken and let the user submit the form without them knowing it happening.
+
+2. In csfr_form.php and csfr_action.php, the token is created in csfr_form.php and include that token in the submission and the session, making it difficult to forge the submission by pretending to be the legitimate user 
+because the legitimate form request includes a valid token, and the token will be checked before the request gets processed.
